@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadhil 1717 Store - Top Up Game Termurah & Terpercaya</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Poppins', sans-serif; background-color: #0b0f19; color: #f3f4f6; }
+        .game-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.3); }
+        .active-game { border-color: #6366f1 !important; background-color: rgba(99, 102, 241, 0.1); }
+        .item-card.selected { border-color: #6366f1 !important; background-color: rgba(99, 102, 241, 0.15); }
+        .pay-card.selected { border-color: #6366f1 !important; background-color: rgba(99, 102, 241, 0.15); }
+    </style>
+</head>
+<body class="min-h-screen pb-12">
+
+    <!-- Header / Navbar -->
+    <header class="bg-slate-900/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- Logo Utama Toko -->
+                <img src="logo.jpg" alt="Logo Fadhil 1717" class="w-10 h-10 rounded-xl object-cover shadow-lg shadow-indigo-500/40 border border-indigo-500/35">
+                <div>
+                    <h1 class="font-extrabold text-lg text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-500">FADHIL 1717 STORE</h1>
+                    <p class="text-xs text-slate-400">Top Up Game Cepat & Aman 24 Jam</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 bg-slate-800/60 px-3 py-1.5 rounded-full border border-slate-700/50 text-xs text-emerald-400">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Buka / Ready</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 mt-6 space-y-6">
+
+        <!-- Banner Promo -->
+        <div class="bg-gradient-to-r from-indigo-900/50 via-purple-900/40 to-slate-900 border border-indigo-500/30 rounded-2xl p-5 shadow-xl relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl">
+                <i class="fa-solid fa-fire"></i>
+            </div>
+            <h2 class="text-xl font-bold text-white mb-1">🔥 Selamat Datang di Fadhil 1717 Store</h2>
+            <p class="text-xs text-slate-300 leading-relaxed">Pilih game favoritmu di bawah ini, masukkan ID, pilih nominal, dan selesaikan pesanan langsung via WhatsApp admin!</p>
+        </div>
+
+        <!-- STEP 1: Pilih Game -->
+        <section class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 shadow-xl">
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="bg-indigo-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">1</span>
+                <h3 class="font-bold text-base text-white">Pilih Game</h3>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <!-- Game 1: ML -->
+                <div onclick="pilihGame('Mobile Legends', 'ml')" id="card-ml" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
+                    <img src="ml.jpg" alt="Mobile Legends" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
+                    <div class="font-semibold text-xs text-white">Mobile Legends</div>
+                </div>
+                <!-- Game 2: PUBG -->
+                <div onclick="pilihGame('PUBG Mobile', 'pubg')" id="card-pubg" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
+                    <img src="pubg.jpg" alt="PUBG Mobile" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
+                    <div class="font-semibold text-xs text-white">PUBG Mobile</div>
+                </div>
+                <!-- Game 3: FF -->
+                <div onclick="pilihGame('Free Fire', 'ff')" id="card-ff" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
+                    <img src="ff.jpg" alt="Free Fire" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
+                    <div class="font-semibold text-xs text-white">Free Fire</div>
+                </div>
+                <!-- Game 4: HOK -->
+                <div onclick="pilihGame('Honor of Kings', 'hok')" id="card-hok" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
+                    <img src="hok.jpg" alt="Honor of Kings" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
+                    <div class="font-semibold text-xs text-white">Honor of Kings</div>
+                </div>
+                <!-- Game 5: CoC -->
+                <div onclick="pilihGame('Clash of Clans', 'coc')" id="card-coc" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
+                    <img src="coc.jpg" alt="Clash of Clans" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
+                    <div class="font-semibold text-xs text-white">Clash of Clans</div>
+                </div>
+                <!-- Game 6: 8 Ball Pool -->
+                <div onclick="pilihGame('8 Ball Pool', 'pool')" id="card-pool" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
+                    <img src="pool.jpg" alt="8 Ball Pool" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
+                    <div class="font-semibold text-xs text-white">8 Ball Pool</div>
+                </div>
+                <!-- Game 7: Roblox -->
+                <div onclick="pilihGame('Roblox', 'roblox')" id="card-roblox" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
+                    <img src="roblox.jpg" alt="Roblox" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
+                    <div class="font-semibold text-xs text-white">Roblox</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 2: Masukkan Data Akun -->
+        <section class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 shadow-xl">
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="bg-indigo-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">2</span>
+                <h3 class="font-bold text-base text-white">Masukkan Data Akun</h3>
+            </div>
+            
+            <div id="form-input-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                    <label class="block text-xs text-slate-400 mb-1" id="label-id1">User ID</label>
+                    <input type="text" id="user-id" placeholder="Contoh: 12345678" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+                </div>
+                <div id="wrapper-id2">
+                    <label class="block text-xs text-slate-400 mb-1" id="label-id2">Server ID (Zone)</label>
+                    <input type="text" id="zone-id" placeholder="Contoh: 1234" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 3: Pilih Nominal / Item -->
+        <section class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 shadow-xl">
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="bg-indigo-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">3</span>
+                <h3 class="font-bold text-base text-white">Pilih Nominal Item (<span id="nama-game-terpilih">Mobile Legends</span>)</h3>
+            </div>
+
+            <div id="list-item" class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <!-- Daftar item dimuat otomatis -->
+            </div>
+        </section>
+
+        <!-- STEP 4: Pilih Metode Pembayaran -->
+        <section class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 shadow-xl">
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="bg-indigo-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">4</span>
+                <h3 class="font-bold text-base text-white">Metode Pembayaran</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div onclick="pilihPembayaran('QRIS (Semua E-Wallet / Bank)')" id="pay-qris" class="pay-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl transition-all">
+                    <div class="font-bold text-xs text-white"><i class="fa-solid fa-qrcode text-indigo-400 mr-2"></i> QRIS All Payment</div>
+                    <div class="text-[10px] text-slate-400 mt-1">Scan pakai DANA, OVO, Gopay, BCA, dll</div>
+                </div>
+                <div onclick="pilihPembayaran('DANA / OVO / GoPay')" id="pay-wallet" class="pay-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl transition-all">
+                    <div class="font-bold text-xs text-white"><i class="fa-solid fa-wallet text-blue-400 mr-2"></i> E-Wallet Transfer</div>
+                    <div class="text-[10px] text-slate-400 mt-1">Transfer langsung ke akun e-wallet admin</div>
+                </div>
+                <div onclick="pilihPembayaran('Transfer Bank (BCA/Mandiri)')" id="pay-bank" class="pay-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl transition-all">
+                    <div class="font-bold text-xs text-white"><i class="fa-solid fa-building-columns text-emerald-400 mr-2"></i> Transfer Bank</div>
+                    <div class="text-[10px] text-slate-400 mt-1">BCA / Mandiri / BRI</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tombol Checkout -->
+        <button onclick="prosesCheckout()" class="w-full bg-gradient-to-r from-indigo-600 to-pink-600 hover:from-indigo-500 hover:to-pink-500 text-white font-bold py-3.5 rounded-2xl shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center space-x-2 cursor-pointer text-sm">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Beli Sekarang via WhatsApp</span>
+        </button>
+
+        <!-- Footer -->
+        <footer class="text-center text-xs text-slate-500 py-4">
+            &copy; 2026 Fadhil 1717 Store. All Rights Reserved.
+        </footer>
+
+    </main>
+
+    <script>
+        const dataProduk = {
+            ml: [
+                { nama: "86 Diamond (82+4)", harga: "Rp 20.000" },
+                { nama: "172 Diamond (164+8)", harga: "Rp 40.000" },
+                { nama: "257 Diamond (244+13)", harga: "Rp 60.000" },
+                { nama: "344 Diamond (326+18)", harga: "Rp 80.000" },
+                { nama: "429 Diamond (407+22)", harga: "Rp 100.000" },
+                { nama: "Starlight Member", harga: "Rp 130.000" }
+            ],
+            pubg: [
+                { nama: "60 UC", harga: "Rp 15.000" },
+                { nama: "325 UC", harga: "Rp 75.000" },
+                { nama: "660 UC", harga: "Rp 150.000" },
+                { nama: "1800 UC", harga: "Rp 375.000" }
+            ],
+            ff: [
+                { nama: "70 Diamond", harga: "Rp 10.000" },
+                { nama: "140 Diamond", harga: "Rp 20.000" },
+                { nama: "355 Diamond", harga: "Rp 50.000" },
+                { nama: "720 Diamond", harga: "Rp 100.000" }
+            ],
+            hok: [
+                { nama: "80 Tokens", harga: "Rp 15.000" },
+                { nama: "240 Tokens", harga: "Rp 45.000" },
+                { nama: "400 Tokens", harga: "Rp 75.000" },
+                { nama: "800 Tokens", harga: "Rp 150.000" }
+            ],
+            coc: [
+                { nama: "80 Gems", harga: "Rp 15.000" },
+                { nama: "500 Gems", harga: "Rp 75.000" },
+                { nama: "1200 Gems", harga: "Rp 150.000" }
+            ],
+            pool: [
+                { nama: "100.000 Coins", harga: "Rp 10.000" },
+                { nama: "500.000 Coins", harga: "Rp 45.000" },
+                { nama: "1.000.000 Coins", harga: "Rp 85.000" }
+            ],
+            roblox: [
+                { nama: "400 Robux", harga: "Rp 75.000" },
+                { nama: "800 Robux", harga: "Rp 150.000" },
+                { nama: "1700 Robux", harga: "Rp 300.000" }
+            ]
+        };
+
+        let gameAktif = "Mobile Legends";
+        let kodeGameAktif = "ml";
+        let itemTerpilih = "";
+        let pembayaranTerpilih = "";
+        let nomorAdmin = "6285157668058";
+
+        function pilihGame(namaGame, kodeGame) {
+            gameAktif = namaGame;
+            kodeGameAktif = kodeGame;
+            itemTerpilih = "";
+
+            document.querySelectorAll('.game-card').forEach(el => el.classList.remove('active-game'));
+            document.getElementById('card-' + kodeGame).classList.add('active-game');
+            document.getElementById('nama-game-terpilih').innerText = namaGame;
+
+            const label1 = document.getElementById('label-id1');
+            const wrapper2 = document.getElementById('wrapper-id2');
+            if(kodeGame === 'roblox') {
+                label1.innerText = "Username Roblox";
+                wrapper2.style.display = "none";
+            } else {
+                label1.innerText = "User ID";
+                wrapper2.style.display = "block";
+                document.getElementById('label-id2').innerText = kodeGame === 'pubg' ? "Server ID (kosongkan jika tidak ada)" : "Server ID (Zone)";
+            }
+
+            muatItem(kodeGame);
+        }
+
+        function muatItem(kode) {
+            const container = document.getElementById('list-item');
+            container.innerHTML = "";
+            dataProduk[kode].forEach((item, index) => {
+                let div = document.createElement('div');
+                div.className = "item-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl transition-all";
+                div.id = `item-${index}`;
+                div.onclick = () => pilihItem(item.nama, index);
+                div.innerHTML = `
+                    <div class="font-semibold text-xs text-white mb-1">${item.nama}</div>
+                    <div class="text-indigo-400 font-bold text-xs">${item.harga}</div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function pilihItem(namaItem, index) {
+            itemTerpilih = namaItem;
+            document.querySelectorAll('.item-card').forEach(el => el.classList.remove('selected'));
+            document.getElementById(`item-${index}`).classList.add('selected');
+        }
+
+        function pilihPembayaran(metode) {
+            pembayaranTerpilih = metode;
+            document.querySelectorAll('.pay-card').forEach(el => el.classList.remove('selected'));
+            
+            if(metode.includes("QRIS")) document.getElementById('pay-qris').classList.add('selected');
+            else if(metode.includes("E-Wallet")) document.getElementById('pay-wallet').classList.add('selected');
+            else document.getElementById('pay-bank').classList.add('selected');
+        }
+
+        function prosesCheckout() {
+            let userId = document.getElementById('user-id').value.trim();
+            let zoneId = document.getElementById('zone-id').value.trim();
+
+            if(!userId) {
+                alert("Mohon masukkan User ID / Username terlebih dahulu!");
+                return;
+            }
+            if(!itemTerpilih) {
+                alert("Mohon pilih nominal item yang ingin dibeli!");
+                return;
+            }
+            if(!pembayaranTerpilih) {
+                alert("Mohon pilih metode pembayaran!");
+                return;
+            }
+
+            let detailAkun = kodeGameAktif === 'roblox' ? `Username: ${userId}` : `User ID: ${userId} (${zoneId})`;
+
+            let pesan = `Halo Admin Fadhil 1717 Store, saya ingin melakukan pemesanan top up game:\n\n` +
+                        `🎮 *Game:* ${gameAktif}\n` +
+                        `👤 *Data Akun:* ${detailAkun}\n` +
+                        `📦 *Item:* ${itemTerpilih}\n` +
+                        `💳 *Pembayaran:* ${pembayaranTerpilih}\n\n` +
+                        `Mohon segera diproses ya kak, terima kasih!`;
+
+            let urlWa = `https://wa.me/${nomorAdmin}?text=` + encodeURIComponent(pesan);
+            window.open(urlWa, '_blank');
+        }
+
+        muatItem('ml');
+    </script>
+</body>
+</html>http://localhost:2435/storage/emulated/0/Documents/toko_topup_fadhil1717.html
