@@ -21,7 +21,6 @@
     <header class="bg-slate-900/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
         <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <!-- Logo Utama Toko -->
                 <img src="logo.jpg" alt="Logo Fadhil 1717" class="w-10 h-10 rounded-xl object-cover shadow-lg shadow-indigo-500/40 border border-indigo-500/35">
                 <div>
                     <h1 class="font-extrabold text-lg text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-500">FADHIL 1717 STORE</h1>
@@ -42,7 +41,7 @@
             <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl">
                 <i class="fa-solid fa-fire"></i>
             </div>
-            <h2 class="text-xl font-bold text-white mb-1">🔥 Selamat Datang di Fadhil 1717 Store</h2>
+            <h2 class="text-xl font-bold text-white mb-1">Selamat Datang di Fadhil 1717 Store</h2>
             <p class="text-xs text-slate-300 leading-relaxed">Pilih game favoritmu di bawah ini, masukkan ID, pilih nominal, dan selesaikan pesanan langsung via WhatsApp admin!</p>
         </div>
 
@@ -54,37 +53,30 @@
             </div>
             
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <!-- Game 1: ML -->
                 <div onclick="pilihGame('Mobile Legends', 'ml')" id="card-ml" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
                     <img src="ml.jpg" alt="Mobile Legends" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
                     <div class="font-semibold text-xs text-white">Mobile Legends</div>
                 </div>
-                <!-- Game 2: PUBG -->
                 <div onclick="pilihGame('PUBG Mobile', 'pubg')" id="card-pubg" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
                     <img src="pubg.jpg" alt="PUBG Mobile" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
                     <div class="font-semibold text-xs text-white">PUBG Mobile</div>
                 </div>
-                <!-- Game 3: FF -->
                 <div onclick="pilihGame('Free Fire', 'ff')" id="card-ff" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
                     <img src="ff.jpg" alt="Free Fire" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
                     <div class="font-semibold text-xs text-white">Free Fire</div>
                 </div>
-                <!-- Game 4: HOK -->
                 <div onclick="pilihGame('Honor of Kings', 'hok')" id="card-hok" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
                     <img src="hok.jpg" alt="Honor of Kings" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
                     <div class="font-semibold text-xs text-white">Honor of Kings</div>
                 </div>
-                <!-- Game 5: CoC -->
-                <div onclick="pilihGame('Clash of Clans', 'coc')" id="card-coc" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
-                    <img src="coc.jpg" alt="Clash of Clans" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
-                    <div class="font-semibold text-xs text-white">Clash of Clans</div>
+                <div onclick="pilihGame('Magic Chess Go Go', 'mcgg')" id="card-mcgg" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
+                    <img src="mcgg.jpg" alt="Magic Chess Go Go" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
+                    <div class="font-semibold text-xs text-white">Magic Chess Go Go</div>
                 </div>
-                <!-- Game 6: 8 Ball Pool -->
                 <div onclick="pilihGame('8 Ball Pool', 'pool')" id="card-pool" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
                     <img src="pool.jpg" alt="8 Ball Pool" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
                     <div class="font-semibold text-xs text-white">8 Ball Pool</div>
                 </div>
-                <!-- Game 7: Roblox -->
                 <div onclick="pilihGame('Roblox', 'roblox')" id="card-roblox" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
                     <img src="roblox.jpg" alt="Roblox" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
                     <div class="font-semibold text-xs text-white">Roblox</div>
@@ -118,9 +110,8 @@
                 <h3 class="font-bold text-base text-white">Pilih Nominal Item (<span id="nama-game-terpilih">Mobile Legends</span>)</h3>
             </div>
 
-            <div id="list-item" class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                <!-- Daftar item dimuat otomatis -->
-            </div>
+            <!-- Daftar item akan dimuat otomatis ke dalam id="list-item" ini -->
+            <div id="list-item" class="grid grid-cols-2 sm:grid-cols-3 gap-3"></div>
         </section>
 
         <!-- STEP 4: Pilih Metode Pembayaran -->
@@ -130,18 +121,39 @@
                 <h3 class="font-bold text-base text-white">Metode Pembayaran</h3>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div onclick="pilihPembayaran('QRIS (Semua E-Wallet / Bank)')" id="pay-qris" class="pay-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl transition-all">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5">
+                <div onclick="pilihPembayaran('QRIS (Semua E-Wallet / Bank)'); tampilkanQris();" id="pay-qris" class="pay-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl transition-all">
                     <div class="font-bold text-xs text-white"><i class="fa-solid fa-qrcode text-indigo-400 mr-2"></i> QRIS All Payment</div>
-                    <div class="text-[10px] text-slate-400 mt-1">Scan pakai DANA, OVO, Gopay, BCA, dll</div>
+                    <div class="text-[10px] text-slate-400 mt-1">Klik untuk scan QRIS</div>
                 </div>
                 <div onclick="pilihPembayaran('DANA / OVO / GoPay')" id="pay-wallet" class="pay-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl transition-all">
                     <div class="font-bold text-xs text-white"><i class="fa-solid fa-wallet text-blue-400 mr-2"></i> E-Wallet Transfer</div>
-                    <div class="text-[10px] text-slate-400 mt-1">Transfer langsung ke akun e-wallet admin</div>
+                    <div class="text-[10px] text-slate-400 mt-1">DANA / GoPay: 085157668058</div>
                 </div>
-                <div onclick="pilihPembayaran('Transfer Bank (BCA/Mandiri)')" id="pay-bank" class="pay-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl transition-all">
-                    <div class="font-bold text-xs text-white"><i class="fa-solid fa-building-columns text-emerald-400 mr-2"></i> Transfer Bank</div>
-                    <div class="text-[10px] text-slate-400 mt-1">BCA / Mandiri / BRI</div>
+                <div onclick="pilihPembayaran('Transfer Bank BCA'); salinNoRek();" id="pay-bank" class="pay-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl transition-all">
+                    <div class="font-bold text-xs text-white"><i class="fa-solid fa-building-columns text-emerald-400 mr-2"></i> Transfer Bank BCA</div>
+                    <div class="text-[10px] text-slate-400 mt-1">No. Rek: 4373464263 (Klik salin)</div>
+                </div>
+            </div>
+
+            <!-- Detail Informasi Pembayaran di Web -->
+            <div class="bg-slate-800/50 border border-slate-700/60 rounded-xl p-4 text-center space-y-3">
+                <h4 class="font-bold text-sm text-indigo-300"><i class="fa-solid fa-circle-info mr-1"></i> Informasi Rekening & Pembayaran</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-left">
+                    <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800">
+                        <p class="text-slate-400 font-semibold mb-1">E-Wallet (DANA / GoPay)</p>
+                        <p class="text-emerald-400 font-bold text-sm">085157668058</p>
+                        <p class="text-[10px] text-slate-400 mt-0.5">A.n. Fadhil Store</p>
+                    </div>
+                    <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800">
+                        <p class="text-slate-400 font-semibold mb-1">Bank BCA</p>
+                        <p class="text-emerald-400 font-bold text-sm">4373464263</p>
+                        <p class="text-[10px] text-slate-400 mt-0.5">A.n. Muhamad F. R. S. W.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800 text-center">
+                    <p class="text-slate-400 font-semibold mb-1">QRIS All Payment</p>
+                    <p class="text-indigo-400 font-bold text-xs">A.n. MUHAMAD F. R. S. W., DIGI (NMID: ID1026478384138)</p>
                 </div>
             </div>
         </section>
@@ -159,48 +171,85 @@
 
     </main>
 
+    <!-- Modal Popup QRIS -->
+    <div id="qris-modal" onclick="tutupQris()" style="display: none;" class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-700 p-5 rounded-2xl max-w-sm w-full text-center relative shadow-2xl" onclick="event.stopPropagation()">
+            <h3 class="font-bold text-white mb-2 text-sm">Scan QRIS Pembayaran</h3>
+            <p class="text-[11px] text-slate-400 mb-3">Support DANA, OVO, GoPay, BCA, dll</p>
+            <img src="qris.jpg" alt="QRIS Fadhil Store" class="w-full rounded-xl border border-slate-700 mb-3 bg-white p-2">
+            <div class="text-[10px] text-slate-300 mb-4 bg-slate-800 p-2 rounded-lg">
+                <strong>MUHAMAD F. R. S. W., DIGI</strong><br>NMID: ID1026478384138
+            </div>
+            <button onclick="tutupQris()" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2 rounded-xl text-xs cursor-pointer">Tutup</button>
+        </div>
+    </div>
+
     <script>
         const dataProduk = {
             ml: [
-                { nama: "86 Diamond (82+4)", harga: "Rp 20.000" },
-                { nama: "172 Diamond (164+8)", harga: "Rp 40.000" },
-                { nama: "257 Diamond (244+13)", harga: "Rp 60.000" },
-                { nama: "344 Diamond (326+18)", harga: "Rp 80.000" },
-                { nama: "429 Diamond (407+22)", harga: "Rp 100.000" },
-                { nama: "Starlight Member", harga: "Rp 130.000" }
+                { nama: "Weekly Diamond Pass", harga: "Rp 32.000" },
+                { nama: "Weekly Elite Pack", harga: "Rp 16.700" },
+                { nama: "Monthly Epic Pack", harga: "Rp 82.500" },
+                { nama: "Twilight Pass", harga: "Rp 165.400" },
+                { nama: "5 Diamonds", harga: "Rp 1.800" },
+                { nama: "11 Diamonds", harga: "Rp 3.500" },
+                { nama: "28 Diamonds", harga: "Rp 10.300" },
+                { nama: "85 Diamonds", harga: "Rp 29.400" },
+                { nama: "170 Diamonds", harga: "Rp 58.900" },
+                { nama: "240 Diamonds", harga: "Rp 83.300" },
+                { nama: "296 Diamonds", harga: "Rp 102.300" },
+                { nama: "429 Diamonds", harga: "Rp 147.100" },
+                { nama: "570 Diamonds", harga: "Rp 177.300" },
+                { nama: "849 Diamonds", harga: "Rp 284.600" }
             ],
             pubg: [
-                { nama: "60 UC", harga: "Rp 15.000" },
-                { nama: "325 UC", harga: "Rp 75.000" },
-                { nama: "660 UC", harga: "Rp 150.000" },
-                { nama: "1800 UC", harga: "Rp 375.000" }
+                { nama: "60 UC", harga: "Rp 20.400" },
+                { nama: "325 (300+25) UC", harga: "Rp 102.000" },
+                { nama: "660 UC", harga: "Rp 202.800" },
+                { nama: "1800 UC", harga: "Rp 507.600" },
+                { nama: "3850 UC", harga: "Rp 1.015.200" }
             ],
             ff: [
-                { nama: "70 Diamond", harga: "Rp 10.000" },
-                { nama: "140 Diamond", harga: "Rp 20.000" },
-                { nama: "355 Diamond", harga: "Rp 50.000" },
-                { nama: "720 Diamond", harga: "Rp 100.000" }
+                { nama: "Member Mingguan", harga: "Rp 31.900" },
+                { nama: "Member Bulanan", harga: "Rp 96.000" },
+                { nama: "BP Card", harga: "Rp 49.200" },
+                { nama: "5 Diamonds", harga: "Rp 1.100" },
+                { nama: "12 Diamonds", harga: "Rp 2.200" },
+                { nama: "50 Diamonds", harga: "Rp 8.700" },
+                { nama: "70 Diamonds", harga: "Rp 10.900" },
+                { nama: "140 Diamonds", harga: "Rp 21.900" },
+                { nama: "355 Diamonds", harga: "Rp 54.600" },
+                { nama: "720 Diamonds", harga: "Rp 109.300" },
+                { nama: "1450 Diamonds", harga: "Rp 218.500" },
+                { nama: "2180 Diamonds", harga: "Rp 327.800" },
+                { nama: "3640 Diamonds", harga: "Rp 546.300" }
             ],
             hok: [
-                { nama: "80 Tokens", harga: "Rp 15.000" },
-                { nama: "240 Tokens", harga: "Rp 45.000" },
-                { nama: "400 Tokens", harga: "Rp 75.000" },
-                { nama: "800 Tokens", harga: "Rp 150.000" }
+                { nama: "Weekly Card", harga: "Rp 20.500" },
+                { nama: "Weekly Card Plus", harga: "Rp 63.000" },
+                { nama: "8 Tokens", harga: "Rp 1.800" },
+                { nama: "80 Tokens", harga: "Rp 18.650" },
+                { nama: "240 Tokens", harga: "Rp 55.700" },
+                { nama: "400 Tokens", harga: "Rp 92.900" }
             ],
-            coc: [
-                { nama: "80 Gems", harga: "Rp 15.000" },
-                { nama: "500 Gems", harga: "Rp 75.000" },
-                { nama: "1200 Gems", harga: "Rp 150.000" }
+            mcgg: [
+                { nama: "Weekly Card", harga: "Rp 30.850" },
+                { nama: "MC 5 DM", harga: "Rp 1.950" },
+                { nama: "MC 12 DM", harga: "Rp 4.300" },
+                { nama: "MC 28 DM", harga: "Rp 9.750" },
+                { nama: "MC 85 DM", harga: "Rp 28.800" },
+                { nama: "MC 170 DM", harga: "Rp 56.650" }
             ],
             pool: [
-                { nama: "100.000 Coins", harga: "Rp 10.000" },
-                { nama: "500.000 Coins", harga: "Rp 45.000" },
-                { nama: "1.000.000 Coins", harga: "Rp 85.000" }
+                { nama: "20 Cash", harga: "Rp 16.350" },
+                { nama: "50 Cash", harga: "Rp 41.000" },
+                { nama: "110 Cash", harga: "Rp 81.500" },
+                { nama: "20.000 Coins", harga: "Rp 16.200" },
+                { nama: "52.000 Coins", harga: "Rp 42.950" }
             ],
             roblox: [
-                { nama: "400 Robux", harga: "Rp 75.000" },
-                { nama: "800 Robux", harga: "Rp 150.000" },
-                { nama: "1700 Robux", harga: "Rp 300.000" }
+                { nama: "50 Robux", harga: "Rp 9.800" },
+                { nama: "100 Robux", harga: "Rp 19.650" }
             ]
         };
 
@@ -236,6 +285,7 @@
         function muatItem(kode) {
             const container = document.getElementById('list-item');
             container.innerHTML = "";
+            if(!dataProduk[kode]) return;
             dataProduk[kode].forEach((item, index) => {
                 let div = document.createElement('div');
                 div.className = "item-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl transition-all";
@@ -260,41 +310,4 @@
             document.querySelectorAll('.pay-card').forEach(el => el.classList.remove('selected'));
             
             if(metode.includes("QRIS")) document.getElementById('pay-qris').classList.add('selected');
-            else if(metode.includes("E-Wallet")) document.getElementById('pay-wallet').classList.add('selected');
-            else document.getElementById('pay-bank').classList.add('selected');
-        }
-
-        function prosesCheckout() {
-            let userId = document.getElementById('user-id').value.trim();
-            let zoneId = document.getElementById('zone-id').value.trim();
-
-            if(!userId) {
-                alert("Mohon masukkan User ID / Username terlebih dahulu!");
-                return;
-            }
-            if(!itemTerpilih) {
-                alert("Mohon pilih nominal item yang ingin dibeli!");
-                return;
-            }
-            if(!pembayaranTerpilih) {
-                alert("Mohon pilih metode pembayaran!");
-                return;
-            }
-
-            let detailAkun = kodeGameAktif === 'roblox' ? `Username: ${userId}` : `User ID: ${userId} (${zoneId})`;
-
-            let pesan = `Halo Admin Fadhil 1717 Store, saya ingin melakukan pemesanan top up game:\n\n` +
-                        `🎮 *Game:* ${gameAktif}\n` +
-                        `👤 *Data Akun:* ${detailAkun}\n` +
-                        `📦 *Item:* ${itemTerpilih}\n` +
-                        `💳 *Pembayaran:* ${pembayaranTerpilih}\n\n` +
-                        `Mohon segera diproses ya kak, terima kasih!`;
-
-            let urlWa = `https://wa.me/${nomorAdmin}?text=` + encodeURIComponent(pesan);
-            window.open(urlWa, '_blank');
-        }
-
-        muatItem('ml');
-    </script>
-</body>
-</html>http://localhost:2435/storage/emulated/0/Documents/toko_topup_fadhil1717.html
+            else if(met
