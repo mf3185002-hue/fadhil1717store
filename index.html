@@ -38,10 +38,7 @@
 
         <!-- Banner Promo -->
         <div class="bg-gradient-to-r from-indigo-900/50 via-purple-900/40 to-slate-900 border border-indigo-500/30 rounded-2xl p-5 shadow-xl relative overflow-hidden">
-            <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl">
-                <i class="fa-solid fa-fire"></i>
-            </div>
-            <h2 class="text-xl font-bold text-white mb-1">Selamat Datang di Fadhil 1717 Store</h2>
+            <h2 class="text-xl font-bold text-white mb-1">🖕 Selamat Datang di Fadhil 1717 Store</h2>
             <p class="text-xs text-slate-300 leading-relaxed">Pilih game favoritmu di bawah ini, masukkan ID, pilih nominal, dan selesaikan pesanan langsung via WhatsApp admin!</p>
         </div>
 
@@ -110,7 +107,6 @@
                 <h3 class="font-bold text-base text-white">Pilih Nominal Item (<span id="nama-game-terpilih">Mobile Legends</span>)</h3>
             </div>
 
-            <!-- Daftar item akan dimuat otomatis ke dalam id="list-item" ini -->
             <div id="list-item" class="grid grid-cols-2 sm:grid-cols-3 gap-3"></div>
         </section>
 
@@ -310,4 +306,60 @@
             document.querySelectorAll('.pay-card').forEach(el => el.classList.remove('selected'));
             
             if(metode.includes("QRIS")) document.getElementById('pay-qris').classList.add('selected');
-            else if(met
+            else if(metode.includes("E-Wallet")) document.getElementById('pay-wallet').classList.add('selected');
+            else document.getElementById('pay-bank').classList.add('selected');
+        }
+
+        function salinNoRek() {
+            let noRek = "4373464263";
+            navigator.clipboard.writeText(noRek).then(() => {
+                alert("Nomor Rekening BCA (4373464263) berhasil disalin!");
+            });
+        }
+
+        function tampilkanQris() {
+            document.getElementById('qris-modal').style.display = 'flex';
+        }
+
+        function tutupQris() {
+            document.getElementById('qris-modal').style.display = 'none';
+        }
+
+        function prosesCheckout() {
+            let userId = document.getElementById('user-id').value.trim();
+            let zoneId = document.getElementById('zone-id').value.trim();
+
+            if(!userId) {
+                alert("Mohon masukkan User ID / Username terlebih dahulu!");
+                return;
+            }
+            if(!itemTerpilih) {
+                alert("Mohon pilih nominal item yang ingin dibeli!");
+                return;
+            }
+            if(!pembayaranTerpilih) {
+                alert("Mohon pilih metode pembayaran!");
+                return;
+            }
+
+            let detailAkun = kodeGameAktif === 'roblox' ? `Username: ${userId}` : `User ID: ${userId} (${zoneId})`;
+
+            let pesan = `Halo Admin Fadhil 1717 Store, saya ingin melakukan pemesanan top up game:\n\n` +
+                        `🎮 *Game:* ${gameAktif}\n` +
+                        `👤 *Data Akun:* ${detailAkun}\n` +
+                        `📦 *Item:* ${itemTerpilih}\n` +
+                        `💳 *Pembayaran:* ${pembayaranTerpilih}\n\n` +
+                        `*📸 Lampiran:* (Mohon kirimkan foto bukti transfer/pembayaran setelah pesan ini terkirim ya kak)\n\n` +
+                        `Terima kasih!`;
+
+            let urlWa = `https://wa.me/${nomorAdmin}?text=` + encodeURIComponent(pesan);
+            window.open(urlWa, '_blank');
+        }
+
+        window.onload = function() {
+            muatItem('ml');
+            document.getElementById('card-ml').classList.add('active-game');
+        };
+    </script>
+</body>
+</html>
