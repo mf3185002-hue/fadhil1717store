@@ -21,7 +21,7 @@
     <header class="bg-slate-900/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
         <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <img src="logo.jpg" alt="Logo Fadhil 1717" class="w-10 h-10 rounded-xl object-cover shadow-lg shadow-indigo-500/40 border border-indigo-500/35">
+                <img src="logo.jpg" alt="Logo Fadhil 1717" class="w-10 h-10 rounded-xl object-cover shadow-lg shadow-indigo-500/40 border border-indigo-500/35" onerror="this.src='https://via.placeholder.com/40'">
                 <div>
                     <h1 class="font-extrabold text-lg text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-500">FADHIL 1717 STORE</h1>
                     <p class="text-xs text-slate-400">Top Up Game Cepat & Aman 24 Jam</p>
@@ -38,8 +38,8 @@
 
         <!-- Banner Promo -->
         <div class="bg-gradient-to-r from-indigo-900/50 via-purple-900/40 to-slate-900 border border-indigo-500/30 rounded-2xl p-5 shadow-xl relative overflow-hidden">
-            <h2 class="text-xl font-bold text-white mb-1">🖕 Selamat Datang di Fadhil 1717 Store</h2>
-            <p class="text-xs text-slate-300 leading-relaxed">Pilih game favoritmu di bawah ini, masukkan ID, pilih nominal, dan selesaikan pesanan langsung via WhatsApp admin!</p>
+            <h2 class="text-xl font-bold text-white mb-1">🔥 Selamat Datang di Fadhil 1717 Store</h2>
+            <p class="text-xs text-slate-300 leading-relaxed">Pilih game favoritmu di bawah ini, masukkan data akun, pilih nominal, dan selesaikan pesanan langsung via WhatsApp admin!</p>
         </div>
 
         <!-- STEP 1: Pilih Game -->
@@ -51,32 +51,36 @@
             
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 <div onclick="pilihGame('Mobile Legends', 'ml')" id="card-ml" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
-                    <img src="ml.jpg" alt="Mobile Legends" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
+                    <img src="ml.jpg" alt="Mobile Legends" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700" onerror="this.src='https://via.placeholder.com/48'">
                     <div class="font-semibold text-xs text-white">Mobile Legends</div>
                 </div>
                 <div onclick="pilihGame('PUBG Mobile', 'pubg')" id="card-pubg" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
-                    <img src="pubg.jpg" alt="PUBG Mobile" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
+                    <img src="pubg.jpg" alt="PUBG Mobile" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700" onerror="this.src='https://via.placeholder.com/48'">
                     <div class="font-semibold text-xs text-white">PUBG Mobile</div>
                 </div>
                 <div onclick="pilihGame('Free Fire', 'ff')" id="card-ff" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
-                    <img src="ff.jpg" alt="Free Fire" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
+                    <img src="ff.jpg" alt="Free Fire" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700" onerror="this.src='https://via.placeholder.com/48'">
                     <div class="font-semibold text-xs text-white">Free Fire</div>
                 </div>
                 <div onclick="pilihGame('Honor of Kings', 'hok')" id="card-hok" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
-                    <img src="hok.jpg" alt="Honor of Kings" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
+                    <img src="hok.jpg" alt="Honor of Kings" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700" onerror="this.src='https://via.placeholder.com/48'">
                     <div class="font-semibold text-xs text-white">Honor of Kings</div>
                 </div>
                 <div onclick="pilihGame('Magic Chess Go Go', 'mcgg')" id="card-mcgg" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
-                    <img src="mcgg.jpg" alt="Magic Chess Go Go" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
+                    <img src="mcgg.jpg" alt="Magic Chess Go Go" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700" onerror="this.src='https://via.placeholder.com/48'">
                     <div class="font-semibold text-xs text-white">Magic Chess Go Go</div>
                 </div>
                 <div onclick="pilihGame('8 Ball Pool', 'pool')" id="card-pool" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
-                    <img src="pool.jpg" alt="8 Ball Pool" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
+                    <img src="pool.jpg" alt="8 Ball Pool" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700" onerror="this.src='https://via.placeholder.com/48'">
                     <div class="font-semibold text-xs text-white">8 Ball Pool</div>
                 </div>
                 <div onclick="pilihGame('Roblox', 'roblox')" id="card-roblox" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
-                    <img src="roblox.jpg" alt="Roblox" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700">
+                    <img src="roblox.jpg" alt="Roblox" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700" onerror="this.src='https://via.placeholder.com/48'">
                     <div class="font-semibold text-xs text-white">Roblox</div>
+                </div>
+                <div onclick="pilihGame('eFootball', 'efootball')" id="card-efootball" class="game-card cursor-pointer border border-slate-800 bg-slate-800/40 p-3 rounded-xl text-center transition-all">
+                    <img src="efootball.jpg" alt="eFootball" class="w-12 h-12 mx-auto rounded-lg object-cover mb-2 shadow-md border border-slate-700" onerror="this.src='https://via.placeholder.com/48'">
+                    <div class="font-semibold text-xs text-white">eFootball</div>
                 </div>
             </div>
         </section>
@@ -172,7 +176,7 @@
         <div class="bg-slate-900 border border-slate-700 p-5 rounded-2xl max-w-sm w-full text-center relative shadow-2xl" onclick="event.stopPropagation()">
             <h3 class="font-bold text-white mb-2 text-sm">Scan QRIS Pembayaran</h3>
             <p class="text-[11px] text-slate-400 mb-3">Support DANA, OVO, GoPay, BCA, dll</p>
-            <img src="qris.jpg" alt="QRIS Fadhil Store" class="w-full rounded-xl border border-slate-700 mb-3 bg-white p-2">
+            <img src="qris.jpg" alt="QRIS Fadhil Store" class="w-full rounded-xl border border-slate-700 mb-3 bg-white p-2" onerror="this.src='https://via.placeholder.com/200'">
             <div class="text-[10px] text-slate-300 mb-4 bg-slate-800 p-2 rounded-lg">
                 <strong>MUHAMAD F. R. S. W., DIGI</strong><br>NMID: ID1026478384138
             </div>
@@ -246,6 +250,32 @@
             roblox: [
                 { nama: "50 Robux", harga: "Rp 9.800" },
                 { nama: "100 Robux", harga: "Rp 19.650" }
+            ],
+            efootball: [
+                { nama: "750 Coins - For iOS Only", harga: "Rp 142.853" },
+                { nama: "2130 Coins - For iOS Only", harga: "Rp 357.133" },
+                { nama: "1040 Coins - For iOS Only", harga: "Rp 178.566" },
+                { nama: "3250 Coins - For iOS Only", harga: "Rp 535.699" },
+                { nama: "5700 Coins - For iOS Only", harga: "Rp 892.831" },
+                { nama: "12800 Coins - For iOS Only", harga: "Rp 1.785.663" },
+                { nama: "5.000 IDR", harga: "Rp 5.498" },
+                { nama: "10.000 IDR", harga: "Rp 10.995" },
+                { nama: "16.000 IDR", harga: "Rp 17.593" },
+                { nama: "20.000 IDR", harga: "Rp 21.991" },
+                { nama: "35.000 IDR", harga: "Rp 38.484" },
+                { nama: "49.000 IDR", harga: "Rp 53.877" },
+                { nama: "50.000 IDR", harga: "Rp 54.977" },
+                { nama: "65.000 IDR", harga: "Rp 71.469" },
+                { nama: "79.000 IDR", harga: "Rp 86.862" },
+                { nama: "100.000 IDR", harga: "Rp 109.953" },
+                { nama: "129.000 IDR", harga: "Rp 141.839" },
+                { nama: "150.000 IDR", harga: "Rp 164.930" },
+                { nama: "159.000 IDR", harga: "Rp 174.825" },
+                { nama: "249.000 IDR", harga: "Rp 273.783" },
+                { nama: "300.000 IDR", harga: "Rp 329.859" },
+                { nama: "329.000 IDR", harga: "Rp 361.745" },
+                { nama: "399.000 IDR", harga: "Rp 438.712" },
+                { nama: "500.000 IDR", harga: "Rp 549.765" }
             ]
         };
 
@@ -266,8 +296,12 @@
 
             const label1 = document.getElementById('label-id1');
             const wrapper2 = document.getElementById('wrapper-id2');
+            
             if(kodeGame === 'roblox') {
                 label1.innerText = "Username Roblox";
+                wrapper2.style.display = "none";
+            } else if(kodeGame === 'efootball') {
+                label1.innerText = "Data Akun / Email / No WhatsApp";
                 wrapper2.style.display = "none";
             } else {
                 label1.innerText = "User ID";
@@ -330,7 +364,7 @@
             let zoneId = document.getElementById('zone-id').value.trim();
 
             if(!userId) {
-                alert("Mohon masukkan User ID / Username terlebih dahulu!");
+                alert("Mohon masukkan User ID / Username / Data Akun terlebih dahulu!");
                 return;
             }
             if(!itemTerpilih) {
@@ -342,7 +376,14 @@
                 return;
             }
 
-            let detailAkun = kodeGameAktif === 'roblox' ? `Username: ${userId}` : `User ID: ${userId} (${zoneId})`;
+            let detailAkun = "";
+            if(kodeGameAktif === 'roblox') {
+                detailAkun = `Username: ${userId}`;
+            } else if(kodeGameAktif === 'efootball') {
+                detailAkun = `Data Akun: ${userId}`;
+            } else {
+                detailAkun = `User ID: ${userId} (${zoneId})`;
+            }
 
             let pesan = `Halo Admin Fadhil 1717 Store, saya ingin melakukan pemesanan top up game:\n\n` +
                         `🎮 *Game:* ${gameAktif}\n` +
